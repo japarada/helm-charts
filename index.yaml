@@ -1,0 +1,27 @@
+apiVersion: v1
+entries:
+  amdsmiexporter:
+  - apiVersion: v2
+    appVersion: "0.1"
+    created: "2023-06-15T16:56:25.638469564-07:00"
+    description: A Helm chart for amd smi exporter, that exports AMD CPU & GPU metrics
+      to the Prometheus server
+    digest: 015d1775a13ae5bf3e0d227b7774e03196ef0a861117701ffd33a4fe82292807
+    home: https://github.com/amd/amd_smi_exporter
+    keywords:
+    - gpu
+    - rocm
+    - compute
+    - amd_smi_exporter
+    - metrics
+    - monitor
+    - mi250
+    - mi300
+    kubeVersion: '>= 1.16.0-0'
+    name: amdsmiexporter
+    sources:
+    - https://github.com/amd/amd_smi_exporter
+    urls:
+    - https://japarada.github.io/helm-charts/amdsmiexporter-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-06-15T16:56:25.637739202-07:00"
