@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: {{ template "amdsmiexporter.fullname" . }}
+  namespace: kube-system
+  labels:
+    app: {{ template "amdsmiexporter.name" . }}
+  #   chart: {{ template "amdsmiexporter.chart" . }}
+  #   release: {{ .Release.Name }}
+  #   # heritage: {{ .Release.Service }}
+spec:
+  selector:
+    matchLabels:
+      daemonset: {{ template "amdsmiexporter.name" . }}
+  template:
+    metadata:
+      labels:
+        daemonset: {{ template "amdsmiexporter.name" . }}
+        # app: {{ template "amdsmiexporter.name" . }}
+        # chart: {{ template "amdsmiexporter.chart" . }}
+        # release: {{ .Release.Name }}
+        # # heritage: {{ .Release.Service }}
+    spec:
+      # selector:
+      #   matchLabels:
+      #     app: {{ template "amdsmiexporter.name" . }}
+      #     # chart: {{ template "amdsmiexporter.chart" . }}
+      #     # release: {{ .Release.Name }}
+      #     # heritage: {{ .Release.Service }}
+      containers:
+        - name: {{ template "amdsmiexporter.name" . }}
+          image: japarada/amd-smi-exporter:0.1
+          imagePullPolicy: Always
+          securityContext:
+            privileged: true

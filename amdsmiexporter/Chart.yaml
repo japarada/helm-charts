@@ -1,0 +1,18 @@
+apiVersion: v2
+name: amdsmiexporter
+version: 0.1.0
+kubeVersion: ">= 1.16.0-0"
+description: A Helm chart for amd smi exporter, that exports AMD CPU & GPU metrics to the Prometheus server
+appVersion: "0.1"
+sources:
+- https://github.com/amd/amd_smi_exporter
+home: https://github.com/amd/amd_smi_exporter
+keywords:
+  - gpu
+  - rocm
+  - compute
+  - amd_smi_exporter
+  - metrics
+  - monitor
+  - mi250
+  - mi300    
